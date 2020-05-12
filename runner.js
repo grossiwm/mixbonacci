@@ -1,3 +1,5 @@
+l = console.log
+
 const sequences = require('./sequences');
 const test = require('./test');
 
@@ -5,9 +7,15 @@ const fibo = sequences.fibonacci;
 
 const pado = sequences.padovan;
 
-console.log(`For Fibonacci: ${test.doAsserts(fibo, test.fiboCases)}`);
+const jacob = sequences.jacobsthal;
 
-console.log(`For Padovan: ${test.doAsserts(pado, test.padoCases)}`);
+l(`For Fibonacci: ${test.doAsserts(fibo, test.fiboCases)}`);
+
+l(`For Padovan: ${test.doAsserts(pado, test.padoCases)}`);
+
+l(`For Jacobsthal: ${test.doAsserts(jacob, test.jacobCases)}`);
+
+// l(jacob(6))
 
 
 
